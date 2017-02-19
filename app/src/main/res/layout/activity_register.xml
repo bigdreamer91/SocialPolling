@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/usernameWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Username"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emailWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameWrapper"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passwordWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailWrapper"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/nameWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordWrapper"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="Name"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:id="@+id/ageGenderLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/nameWrapper">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/birthdayWrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp">
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:hint="Birthday"
+                android:onClick="showDatePickerDialog"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Spinner
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:id="@+id/genderSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ageGenderLayout"
+        android:id="@+id/cityLayout">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/cityWrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp">
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="City"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/countryWrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp">
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:inputType="textCapWords"
+                android:hint="Country"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cityLayout"
+        android:id="@+id/textViewLayout">
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:id="@+id/preferredCategoryTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textColor="@color/white"
+            android:text="Choose Preferred Categories"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textViewLayout"
+        android:id="@+id/preferredCategoryOneLayout">
+
+        <Spinner
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:id="@+id/preferredCategorySpinnerChoiceOne"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/preferredCategoryOneLayout"
+        android:id="@+id/preferredCategoryTwoLayout">
+
+        <Spinner
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:id="@+id/preferredCategorySpinnerChoiceTwo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/preferredCategoryTwoLayout"
+        android:id="@+id/preferredCategoryThreeLayout">
+
+        <Spinner
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:id="@+id/preferredCategorySpinnerChoiceThree"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnCreateUser"
+        android:background="@color/colorPrimary"
+        android:text="Register User and Login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="createUser"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp" />
+</RelativeLayout>

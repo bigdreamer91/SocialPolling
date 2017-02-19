@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Action Bar. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <!--notification bar -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="editTextStyle">@style/editTextStyle</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/iron</item>
+        <item name="android:textColorPrimary">@color/white</item>
+
+    </style>
+    <style name="editTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+</resources>

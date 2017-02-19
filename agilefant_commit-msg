@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# `git commit -m "commit-message-content"` creates a temporary file with
+# commit message, the commit-msg hook is called with the path to this file
+# (ARGV[0])
+# read the content of the file and validate it against $pattern
+open(FILE, "$ARGV[0]");
+
+local $/ = '!@#$#$%';
+
+my $msg = <FILE>;
+
+#pattern to match
+#forgives leading whitespace
+#[whitespace]REFwhitespaceTASKIDwhitespace[message]
+#message can span multipe lines, but safe to keep it short and single line
+my $pattern = '^\s*REF\s+(\d+)\s+(.*)';
+#ignore case
+#single line
+if ($msg !~ /$pattern/si) {
+	#pattern fail
+	print "\nFAILURE : commit-msg pattern -> REF TASKID [message]\n";
+	exit(1);
+} else {
+	#pattern match
+	print "\nCommit message for task#$1 accepted\n";
+}

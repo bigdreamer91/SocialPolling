@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_poll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="edu.iastate.cs510.company2.activities.CreatePollActivity">
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Your Question"
+    android:id="@+id/yourQuestion"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Choice 1"
+    android:ems="10"
+    android:id="@+id/choice1"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Choice 2"
+    android:ems="10"
+    android:id="@+id/choice2" />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Choice 3"
+    android:ems="10"
+    android:id="@+id/choice3" />
+
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:id="@+id/getImageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:context="edu.iastate.cs510.company2.activities.CreatePollActivity"
+        android:weightSum="1">
+        <Button
+            android:text="Attach Image"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/attachImage"
+            android:onClick="getImage"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:id="@+id/imageView"
+            android:layout_weight="4.11"
+            android:layout_height="150dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="98dp">
+
+        <TextView
+            android:text="Link"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinktextView"
+            android:layout_weight="1.18" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:hint="Enter Link Here"
+            android:ems="10"
+            android:id="@+id/LinkeditText"
+            android:layout_weight="1.18" />
+
+    </LinearLayout>
+
+    <Button
+         android:text="Add Choice"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddChoice" />
+
+    <Button
+        android:text="Create"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSend"
+        android:onClick="sendMessage" />
+
+</LinearLayout>
